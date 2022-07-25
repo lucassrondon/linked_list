@@ -28,7 +28,7 @@ class List:
         if index >= 0 and index <= self.size: #Verifies if the informed index is valid to insert
             new_node = Node(item)
             if self.head:
-                if index == 0: #inserting in the begning of the list
+                if index == 0: #inserting in the beginning of the list
                     new_node.next = self.head # if the index to insert is 0, the new_node begins to point to the first item of the list
                     self.head = new_node # the new node becomes the first item of the list
                 elif index == self.size: #inserting in the ending of the list
@@ -36,7 +36,7 @@ class List:
                     while pointer.next: # finding the last node to insert in its "next", which is the end of the list
                         pointer = pointer.next
                     pointer.next = new_node
-                elif index > 0 and index < self.size: #inserting between the begning and the ending of the list
+                elif index > 0 and index < self.size: #inserting between the beginning and the ending of the list
                     counter = 0
                     pointer = self.head
                     while pointer.next:
